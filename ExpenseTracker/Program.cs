@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddDbContext<ExpenseTrackerDBContext>(
-    option => option.UseSqlServer(builder.Configuration["Data:ConnectionString:ExpenseTracker"]
+    option => option.UseSqlServer(builder.Configuration.GetConnectionString("ExpenseTrackerConnection")
     ));
 
 builder.Services.AddControllersWithViews();
