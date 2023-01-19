@@ -9,9 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 
-builder.Services.AddDbContext<ExpenseTrackerDBContext>(
-    option => option.UseSqlServer(builder.Configuration.GetConnectionString("ExpenseTrackerConnection")
-    ));
+//builder.Services.AddDbContext<ExpenseTrackerDBContext>(
+//    option => option.UseSqlServer(builder.Configuration.GetConnectionString("ExpenseTrackerConnection")
+//    ));
 
 builder.Services.AddControllersWithViews();
 
